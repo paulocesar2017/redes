@@ -1,0 +1,61 @@
+1. Qual a camada que representa a camada de transporte no modelo TCP/IP?
+
+( ) Camada 1 ( ) Camada 2 ( ) Camada 3 ( X ) Camada 4 ( ) Camada 5 ( ) Camada 6 ( ) Camada 7
+
+2. Qual a PDU da camada de transporte? 
+
+( X ) Segmento ( )Pacote ( )Dados ( )Bits ( )Quadros
+
+3. Quais os principais protocolos da camada de transporte?
+
+( )ARP ( X )TCP ( )IP ( )DNS ( X )UDP
+
+4. Marque as características que representam o protocolo TCP. 
+
+( X ) Orientado à conexão; 
+( ) É um protocolo simples; 
+( ) Entrega de dados com baixa sobrecarga; 
+( ) Não orientado a conexão. 
+( ) É utilizado em aplicações como, DNS, Vídeo em Streaming e Voz Sobre IP (VOIP); 
+( X ) Entrega de dados com sobrecarga adicional; 
+( X ) Entrega ordenada, confiável e realiza controle de fluxo 
+( X ) É utilizado em aplicações como navegadores web, E-mail e FTP
+
+5. Marque as características que representam o protocolo UDP. 
+
+( ) Orientado à conexão;
+( X ) É um protocolo simples; 
+( X ) Entrega de dados com baixa sobrecarga; 
+( X ) Não orientado a conexão. 
+( ) É utilizado em aplicações como, DNS, Vídeo em Streaming e Voz Sobre IP (VOIP); 
+( ) Entrega de dados com sobrecarga adicional; 
+( ) Entrega ordenada, confiável e realiza controle de fluxo 
+( ) É utilizado em aplicações como navegadores web, E-mail e FTP.
+
+6. Para que serve o número de portas na camada de transporte?
+
+R =  E manter a comunicaçao entre dois hosts, ou seja ela   e responsavel pela transferencia fim – a -fim
+de maneira eficiente,confiavel e economica de dados entre uma maquina de origem e uma maquina de destino.ela preve dois protocolos, o priimeiro deles e oi TCP (transmission control protocol – protocolo de controle de transmissão), e um protocolo de conecçao confiavel, e o outro UDP protocolo de datagrama do utilizador,corresponde a um protocolo não orientado a conecçao, ou seja sem confiabilidade já que não a garantia de envio ou recebimento de pacotes
+
+
+7. O que são os sockets?
+
+R = são uma abstraçao para endereço de comunicação atravez dos quais processos comunicam,esse indentificadoe de porta e usado para mapera dados recebido pela maquina para processos(aplicações).
+
+
+
+8. Considere uma conexão TCP entre o computador A e o computador B. Suponha que os segmentos TCP que trafegam do computador A para o computador B tenham número de porta de origem X e número de porta destino Y. Quais são os números de porta de origem e destino para os segmentos que trafegam do computador B para o computador A?
+
+9. Descreva por que um desenvolvedor de aplicação pode escolher rodar uma aplicação sobre UDP em vez de TCP.  
+
+R = me
+
+10. Suponha que o cliente A inicie uma sessão Telnet com o servidor S. Quase ao mesmo tempo, o cliente B também inicia uma sessão Telnet com o servidor S. Forneça possíveis números de porta de origem e destino para:
+
+a. os segmentos enviados de A para S.
+b. os segmentos enviados de B para S.
+c. os segmentos enviados de S para A.
+d. Os segmentos enviados de S para B.
+e. Se A e B são hospedeiros diferentes, é possível que o número de porta de origem nos segmentos de A para S seja o mesmo que de B para S?
+
+
