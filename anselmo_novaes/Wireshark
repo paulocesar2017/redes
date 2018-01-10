@@ -1,0 +1,42 @@
+Aluno: Anselmo S. Novaes
+Turma: TS 421
+
+ATIVIDADE WIRESHARK
+
+Exercício 01. Abra o arquivo exercicio-um.pcap. Você deverá ver 26 pacotes nesse arquivo. O conjunto de pacotes descreve
+uma “conversação” entre usuários clientes e um servidor central. Toda essa conversa acontece automaticamente depois que 
+um usuário digita algo e tecla enter. Analise os pacotes para responder às seguintes questões em relação a essa conversação.
+
+a) Qual é o endereço IP do cliente que inicia a conversação?
+R: 131.247.95.216
+
+b) O que está ocorrendo nos frames 3, 4 e 5?
+R: A sincronização está sendo iniciada: O cliente solicita permissão ao destino para que se inicie a conversação, logo em seguida 
+o servidor responde afirmativamente. O cliente envia um pacote marcado com "ACK" e a conexão está estabelecida entre cliente
+e servidor.
+
+c) O que está ocorrendo nos frames 6 e 7?
+R: O Cliente está solicitando a página web e o servidor confirma este pedido.
+
+d) Ignore o frame 8. Contudo, para sua informação, o frame 8 é utilizado para gerenciar o controle de fluxos.
+R: ok
+
+e) O que está ocorrendo com os frames 9 e 10?
+
+
+f) O que está ocorrendo no pacote 11?
+g) Após o recebimento do primeiro conjunto de pacotes, o cliente envia uma nova solicitação no pacote 12. Isso ocorre automaticamente sem qualquer ação realizada pelo usuário. Por que isso ocorre?
+h) O que está ocorrendo nos pacotes 13 a 22?
+i) Explique o que está ocorrendo nos pacotes 23 a 26.
+j) Em poucas palavras descreva o que o usuário está fazendo (lendo email? Acessando uma página web? FTP? Outro?)
+
+Exercício 02. Abra o arquivo exercicio-dois.pcap. Você deverá ver 176 pacotes listados.
+a) Nos primeiros pacotes, a máquina cliente está procurando o common name (cname) de uma página web para encontrar o seu 
+endereço IP. Qual o cname desta página web? Cite dois endereços IP desta página web.
+b) Quantos pacotes/quadros são necessários para receber a página web (referente apenas ao primeiro http request)?
+c) O que está ocorrendo nos pacotes 26 e 27? Todos os componentes de uma página web tem de vir de um mesmo servidor? Dica: 
+Seu computador usa um pedido de DNS para pesquisar um CNAME e ele retorna um conjunto de endereços IP (um endereço primário
+e um ou mais endereços de backup) que podem ser usados para entrar em contato com o servidor.
+d) No pacote 37 vemos outra consulta DNS, desta vez para us.i1.yimg.com. Por que o cliente precisa pesquisar sobre esse endereço IP? Não obtivemos este endereço no pacote 26? (Compare cuidadosamente os dois nomes comuns nos pacotes 26 e 37.)
+e) No pacote 42 vemos uma declaração HTTP "Get" e, no pacote 48, uma nova declaração HTTP "Get". Por que o sistema não precisa de outro pedido de DNS antes da segunda declaração de obtenção? Clique no pacote 42 e olhe na janela do meio. Expanda a linha intitulada "Hypertext Transfer Protocol" e leia a linha "Host:". Compare essa linha com a linha "Host:" para o pacote 48.
+
