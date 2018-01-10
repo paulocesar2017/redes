@@ -22,13 +22,28 @@ d) Ignore o frame 8. Contudo, para sua informação, o frame 8 é utilizado para
 R: ok
 
 e) O que está ocorrendo com os frames 9 e 10?
+R: O servidor fragmentou os pacotes de dados da página web não enviando toda a informação de uma vez.Em seguida o servidor 
+envia a mensagem que transferiu toda a informação. 
 
 
 f) O que está ocorrendo no pacote 11?
-g) Após o recebimento do primeiro conjunto de pacotes, o cliente envia uma nova solicitação no pacote 12. Isso ocorre automaticamente sem qualquer ação realizada pelo usuário. Por que isso ocorre?
+R: O cliente confirma o recebimento dos pacotes (text/html).
+
+g) Após o recebimento do primeiro conjunto de pacotes, o cliente envia uma nova solicitação no pacote 12. Isso ocorre 
+automaticamente sem qualquer ação realizada pelo usuário. Por que isso ocorre?
+R: Na última ação foram transferidos os pacotes em formato texto. Posteriormente são transferidos, no pacote 12, os arquivos 
+de imagem que constituem a página.
+
 h) O que está ocorrendo nos pacotes 13 a 22?
+R: O servidor fragmentou o arquivo de imagem, e envia ao cliente em vários segmentos. No pacote 22 envia uma mensagem ao cliente
+confirmando o envio de todo o arquivo.
+
 i) Explique o que está ocorrendo nos pacotes 23 a 26.
+R: O cliente solicita um arquivo de imagem (favicon.ico). O servidor fragmenta e envia o arquivo. Manda mensagem com OK. O cliente 
+confirma o recebimento do arquivo.
+
 j) Em poucas palavras descreva o que o usuário está fazendo (lendo email? Acessando uma página web? FTP? Outro?)
+R: O usuário está acessando a página web http://www.google.com.br
 
 Exercício 02. Abra o arquivo exercicio-dois.pcap. Você deverá ver 176 pacotes listados.
 a) Nos primeiros pacotes, a máquina cliente está procurando o common name (cname) de uma página web para encontrar o seu 
