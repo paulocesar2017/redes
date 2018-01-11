@@ -20,3 +20,16 @@
  +
  +
  +03. Descreva o algoritmo Dijkstra.
+
+ Sim. O número de endereços IPs é igual ao número de interfaces		  Sim. O número de endereços IPs é igual ao número de interfaces
+  		  
+  Seção 4.4. Questões 13		  Seção 4.4. Questões 13
+ +11011111.00110001.00110111.00011011
+  		  
+  Seção 4.4. Questões 14		  Seção 4.4. Questões 14
+ +ip  10.17.9.200
+ +dhcp
+ +mascara de rede 255.255.248.0
+  		  
+  Seção 4.4. Questões 18		  Seção 4.4. Questões 18
+  O roteador sem fio usa NAT e os endereços IPs podem ser atribuídos aos computadores através do DHCP.
