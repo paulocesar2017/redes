@@ -1,0 +1,26 @@
+QUESTÕES SOBRE CAMADA DE REDE
+
+1 – Vamos rever um pouco da terminologia usada neste livro. Lembre-se de que o nome de um pacote de camadas de transporte é segmento e que o nome de um pacote de camada de enlace é quadro. Qual é o nome de um pacote de camadas de rede? Lembre-se de roteadores e comutadores de camada de enlace são denominados comutadores de pacotes. Qual é a diferença fundamental entre um roteador e um comutador de camada de enlace? Lembre-se de que usamos o termo roteadores tanto para rede de datagramas quanto para redes de VCs.
+Resposta: Na camada de rede um pacote é denominado de detagrama. O comutador de pacotes na camada de rede local ou ethernet é chamado switche, os roteadores conectam os computadores de uma rede à internet por meio de chaveamento intermediário.
+
+12 – Roteadores têm endereços IP? Em caso positivo, quantos endereços eles têm?
+Resposta: Sim. O número de endereços IPs é igual ao numero de interfaces.
+13 – Qual é o equivalente binário de 32 bits para o endereço IP 223.1.3.27?
+Resposta: 223.1.1.1 = 11011111 00000001 00000001 00000001
+
+14 – Visite um hospedeiro que use DHCP para obter seu endereço IP, máscara de rede, roteador de defalt e endereço IP de seu servidor DNS local. Faça uma lista desses valores.  
+Resposta: IP:  192.168.1.21
+                      Máscara de sub-rede: 255.255.255.0
+                      Gateway padrão: 192.168.1.1
+                      Srvidor DNS preferencial: 192.168.1.1
+	          Srvidor DNS alternativo: 8.8.8.8
+
+18 – Suponha que você compre um roteador sem fio e o conecte ao seu modem a cabo. Suponha também que seu ISP designe dinamicamente um endereço IP a seu dispositivo conectado (isto é, seu roteador sem fio). Suponha ainda que você tenha 5 PCs em casa e que usa 802.11 para conecta-los sem fio ao seu roteador também sem fio. Como são designados endereços IP aos cinco PCs? O roteador sem fio usa NAT?
+Resposta: O roteador sem fio usa NAT e os endereços IPs podem ser atribuídos aos computadores através do DHCP.
+
+19 – Compare os campos de cabeçalho do IPv4 e do IPv6 e aponte suas diferenças. Eles têm algum campo em comum?
+Resposta: – As diferenças entre um e outro é de: 1-Capacidade expandida de Routing e Endereçamento: o endereço IP foi aumentado de 32 para 128 bits, para suportar mais níveis hierárquicos de endereçamento e um número maior de nós de rede, além de simplificar a auto-configuração de endereços.  2-Novo tipo de Endereço: o endereço denominado anycast foi adicionado ao protocolo para identificar conjuntos de nós de rede. 3-Simplificação do formato do Cabeçalho (Header): alguns campos do cabeçalho IPv4 foram retirados ou tornaram-se opcionais, para reduzir o processamento dos pacotes de dados.
+
+
+
+ 
