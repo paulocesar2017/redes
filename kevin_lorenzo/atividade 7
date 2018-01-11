@@ -1,0 +1,21 @@
+questao 1 -
+a - 131.247.95.216
+b- uma conversação (sincronismo e confirmação)	
+c - solicita uma pag web, e começa a fazer o envio da pag e confirmando o que foi recebido
+e- acontece a remontagem do segmento enviado, e informa o codigo da pagina acessada.
+g - os cliente e o site estão sincronizando
+h - esta havendo remontagem do segmento e conversação
+i - houve a solicitação da pagina web, houve tambem uma remontagem dos segmentos e a confirmação do cliente 
+j -está acessando uma pagina web.
+
+questao 2- 
+a- yahoo.com - 131.247.92.200 - 216.109.117.106
+b- 6 pacotes
+c- esta ocorrendo uma consulta padrão e houve a resposta. Não, pode vir de mais de um sevidor e pode utilizar mais de um endereço de backup.
+D- porque ele não utilizou o mesmo endereço nas duas. Não, sao diferentes.
+e- porque tem o mesmo host
+f- quando o arquivo é em pdu é repartido, para ser enviado com segurança, pois é um arquivo muito extenso e não da para ser enviado por inteiro. 
+
+questao 3
+a- os ip's são diferentes. No pacote 3 ele sincroniza e no 12 ele confirma.
+b- O cliente está tendo uma coversa criptografada com o servidor. Mensagem a qual que o site do yahoo não faz parte.
