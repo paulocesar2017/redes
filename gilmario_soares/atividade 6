@@ -1,0 +1,69 @@
+ Camada de Transporte
+
+1. Qual a camada que representa a camada de transporte no modelo TCP/IP?
+
+( ) Camada 1 ( ) Camada 2 ( ) Camada 3 ( X ) Camada 4 ( ) Camada 5 ( ) Camada 6 ( ) Camada 7
+
+2. Qual a PDU da camada de transporte? 
+
+( ) Segmento ( X )Pacote ( )Dados ( )Bits ( )Quadros
+
+3. Quais os principais protocolos da camada de transporte?
+
+( )ARP ( X )TCP ( )IP ( )DNS ( X )UDP
+
+4. Marque as características que representam o protocolo TCP. 
+
+(X) Orientado à conexão; 
+( ) É um protocolo simples; 
+( ) Entrega de dados com baixa sobrecarga; 
+( ) Não orientado a conexão. 
+( ) É utilizado em aplicações como, DNS, Vídeo em Streaming e Voz Sobre IP (VOIP); 
+(X) Entrega de dados com sobrecarga adicional; 
+(X) Entrega ordenada, confiável e realiza controle de fluxo 
+(X) É utilizado em aplicações como navegadores web, E-mail e FTP
+
+5. Marque as características que representam o protocolo UDP. 
+
+( ) Orientado à conexão;
+(X) É um protocolo simples; 
+(X) Entrega de dados com baixa sobrecarga; 
+(X) Não orientado a conexão. 
+(X) É utilizado em aplicações como, DNS, Vídeo em Streaming e Voz Sobre IP (VOIP); 
+( ) Entrega de dados com sobrecarga adicional; 
+( ) Entrega ordenada, confiável e realiza controle de fluxo 
+( ) É utilizado em aplicações como navegadores web, E-mail e FTP.
+
+6. Para que serve o número de portas na camada de transporte?
+Resposta: Em Redes de Computadores, uma porta é um software de aplicação específica ou processo específico servindo de ponto final de comunicações em um sistema operacional hospedeiro de um computador. Uma porta tem associação com o endereço de IP do hospedeiro, assim como o tipo de protocolo usado para comunicação. O propósito das portas é para singularmente identificar aplicações e processos de um único computador e assim possibilitá-los a compartilhar uma única conexão física com uma rede de comutação de pacotes, como a internet.
+Os protocolos que usam principalmente portas são os protocolos da camada de transporte, tais como o Protocolo de controle de transmissão (TCP) e User Datagram Protocol (UDP) do conjunto de protocolos da internet.
+
+
+
+7. O que são os sockets?
+
+Resposta: O acesso aos serviços da camada de transporte pode ser feito por primitivas de transporte, essas primitivas são denominadas SOCKET. 
+Por essas primitivas é possível acessar vários protocolos da camada de transporte, dentre eles TCP e UDP. 
+Sockets garantem a intercomunicação bidirecional entre processos, executados localmente ou em máquinas conectadas através de uma LAN/WAN. 
+
+
+8. Considere uma conexão TCP entre o computador A e o computador B. Suponha que os segmentos TCP que trafegam do computador A para o computador B tenham número de porta de origem X e número de porta destino Y. Quais são os números de porta de origem e destino para os segmentos que trafegam do computador B para o computador A?
+
+Resposta: Número de porta origem \u201cy\u201d e número de posrta destino \u201cx\u201d.
+
+
+9. Descreva por que um desenvolvedor de aplicação pode escolher rodar uma aplicação sobre UDP em vez de TCP.
+
+Resposta: Porque O UDP é um protocolo mais simples e por si só não fornece garantia na entrega dos pacotes. No entanto, esse processo de garantia de dados pode ser simplesmente realizado pela aplicação em si (que usa o protocolo UDP) e não pelo protocolo. Basicamente, usando UDP, uma máquina emissor envia uma determinada informação e a máquina receptor recebe essa informação, não existindo qualquer confirmação dos pacotes recebidos. Se um pacote se perder não existe normalmente solicitação de reenvio, simplesmente não existe. Enquanto que o TCP é o protocolo mais usado isto porque fornece garantia na entrega de todos os pacotes entre um PC emissor e um PC receptor. No estabelecimento de ligação entre emissor e receptor existe um “pré-acordo” denominado de Three Way Handshake (SYN, SYN-ACK, ACK).
+
+10. Suponha que o cliente A inicie uma sessão Telnet com o servidor S. Quase ao mesmo tempo, o cliente B também inicia uma sessão Telnet com o servidor S. Forneça possíveis números de porta de origem e destino para:
+
+a. os segmentos enviados de A para S.
+b. os segmentos enviados de B para S.
+c. os segmentos enviados de S para A.
+d. Os segmentos enviados de S para B.
+e. Se A e B são hospedeiros diferentes, é possível que o número de porta de origem nos segmentos de A para S seja o mesmo que de B para S?
+
+Resposta: Sim, Se A e B são hospedeiros (computadores) diferentes, é possível que o número de 
+porta da fonte nos segmentos de A para S seja o me
+smo que nos de B para S
