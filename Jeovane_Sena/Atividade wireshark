@@ -1,0 +1,22 @@
+Exercicio 1
+letra a – 131.247.95.216
+letra b – Está ocorrendo uma sincronização e transferencia de dados.
+letra c – Está trocando as informações entre si e confirmando que foi recebido.
+letra e – Remontou o segmento que foi enviado e informa o codigo da pagina acessada.
+letra f – Está sincronizando novamento com site.
+letra g – O site já está salvo e não precisa de uma nova conversação. 
+letra h – Está remontando o segmento e trocando as informações recebidas.
+letra i – Está solicitando a página, remontando os segmentos e aceitação do cliente.
+letra j – Está acessando uma página na web
+
+Exercicio 2
+letra a – www.yahoo.com (216.109.117.106 e 216.109.117.109)
+letra b – 6 pacotes
+letra c – Está realizando uma consulta padrão e teve a resposta. Não, eles podem usar mais de um, e usar mais endereços de backups.
+letra d – Por que o cliente pesquisou com outro endereço, não obteve o endereço, o cliente utiizou outro endereço.
+letra e – Por que tem o mesmo endereço de host.
+letra f – Quando o arquivo é PDU, ele é repartido e é enviado com segurança, pelo motivo de não conseguir enviar o mesmo por inteiro.
+
+Exercicio 3
+letra a – No pacote 3 ele sincroniza e no pacote 12 ele confirma e os Ips são diferentes.
+letra b – Na linha iii do my.usf.com está comunicado com servidor em mensagem criptografada, já no quadro do yahoo não está acontecendo essa comunicação.
