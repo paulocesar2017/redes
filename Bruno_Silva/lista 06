@@ -1,0 +1,35 @@
++1. Responda às seguintes questões do livro Redes de Computadores e a Internet, 5ª edição, de Kurose. O livro encontra-se na biblioteca:
+ +
+ +Seção 4.1. Questão 01.
+ +1)O nome do pacote é datagrama. Na camada de enlace o comutador de pacotes é um switches para rede local ou ethernet e o roteador conecta os computadores diretamente a internet atraves de chaveamento intermediario.
+ +
+ +Seção 4.4. Questões 12
+ +Roteadores têm endereços IP? Em caso positivo, quantos endereços eles têm?
+ +Sim. O número de endereços IPs é igual ao número de interfaces
+ +
+ +Seção 4.4. Questões 13
+ +
+ +Seção 4.4. Questões 14
+ +
+ +Seção 4.4. Questões 18
+ +O roteador sem fio usa NAT e os endereços IPs podem ser atribuídos aos computadores através do DHCP.
+ +
+ +Seção 4.4. Questões 19
+ +
+ +02. Descreva roteamento estático e roteamento dinâmico. Cite diferenças entre eles.
+ +
+ +
+ +03. Descreva o algoritmo Dijkstra.
+
+ Sim. O número de endereços IPs é igual ao número de interfaces		  Sim. O número de endereços IPs é igual ao número de interfaces
+  		  
+  Seção 4.4. Questões 13		  Seção 4.4. Questões 13
+ +11011111.00110001.00110111.00011011
+  		  
+  Seção 4.4. Questões 14		  Seção 4.4. Questões 14
+ +ip  10.17.9.200
+ +dhcp
+ +mascara de rede 255.255.248.0
+  		  
+  Seção 4.4. Questões 18		  Seção 4.4. Questões 18
+  O roteador sem fio usa NAT e os endereços IPs podem ser atribuídos aos computadores através do DHCP.
