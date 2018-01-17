@@ -1,0 +1,45 @@
+
+atividade de Wireshark
+
+1°) 
+a) 131.247.95.216
+
+b) Conversação do computador com o servidor
+
+c) Solicitação da pagena da web no 6 e 7 ele faz o envio da pagena web
+
+d) atualiza a janela para 6432 porque o servidor ou cliente não estava suportando o tamanho do segmento
+
+e) 9 reorganizar os segmentos e o 10 manda direto para o site
+
+f) conversação do computador com o servidor
+
+g) porque o site ja esta salvo
+
+h) esta remontando os segmentos e trocando as informações 
+
+i) esta solicitando a pagina, remontando os segmentos e aceitando o cliente
+
+j) esta acessando uma pagina na web
+
+2°)
+a) 216.109.117.106
+   216.109.118.70
+
+b) 1221
+
+c) esta ocorrendo uma consulta padrão e esta havendo uma resposta do site desejado 
+   não pois ele envia em outros servidores de backup
+
+d) porque ele esta requisetando outro site não sendo o mesmo pacote 26
+
+e) os hosts são iguais 
+   us.i1.yimg.com\r\n
+   us.i1.yimg.com\r\n
+
+f) os pacotes 141,142,143 nao sao do pacote 160 porque sao diferentes . o pacotes ficam remotando segmentos quando nao enviado sem fluxo continuo.
+
+3°
+a)As duas portas sao diferentes . a porta 80 direciona para web e a outra 443 direciona para outro dns.
+b)
+iii) Porque nao tem uma porta de direcionamento para o site do yahoo.com
