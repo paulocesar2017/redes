@@ -1,0 +1,74 @@
+
+ALUNO: ANSELMO SANTOS NOVAES
+TURMA: TS421
+
+Q 1.1: Em sua opinião, qual a principal publicação científica relacionada ao Mininet-WiFi? Porquê? Você pode utilizar o google 
+scholar para identificar os artigos que citam o Mininet-WiFi.
+
+R: O artigo Mininet-WiFi: Emulating Software-Defined Wireless Networks, pois segundo o site www.scholar.google.com.br é o mais citado 
+dentre os demais encontrados (44 citações).
+
+
+Q 2.1: Qual é o atraso observado entre sta1 e sta2? Houve perda de pacotes no canal? Justifique suas respostas de forma objetiva.
+
+R: Depois de efetuados os comandos "mininet-wifi>sta1 iwconfig" , "mininet-wifi>sta2 iwconfig" e "mininet-wifi>sta1 ping sta2",
+o atraso entre sta1 e sta2 ficou em torno de 0.222 ms, e não houve perda de pacotes, porém depois de efetuado o comando "sta1 iw dev sta1-wlan0 disconnect" houve a desconexão de sta1 e obviamente ao efetuar o ping nenhum pacote foi enviado. Posteriormente após a execução de "mininet-wifi>sta1 iwconfig", "mininet-wifi>sta2 iwconfig" e "mininet-wifi>sta1 ping sta2" sta1 foi reconectada e o ping com sta2 retornou atrasos em torno de 0.222 ms sem perda de pacotes.
+
+Q 2.2: Use a ferramenta iperf para avaliar a banda disponível (Mbps) entre os nós sta1 e sta2.
+
+R: O comando retornou a taxa de transferência de 10.5 e 10.6 Mbps entre os nós e o ap.
+
+Q 2.3: Faça um simples comentário para cada uma das informações especificadas na lista de parâmetros de sta1.
+
+R: Potencia de transmissão (Tx Power) 14 dBm; sta1 conectada a conexão sem fio wlan0; ip de sta1 10.0.0.1; alcance da rede 62 metros; frequencia de operação da rede 2.4 Ghz; modo sem fio 'g' 54 Mbs; Posição (x,y,z) 1,0,0; Canal de operação 1; Indicador de Potência do Sinal Recebido(indica o nível de potência recebido após qualquer perda possível a nível de antena, quanto mais próximo de zero melhor o sinal) em -30; 
+
+Questão 3.1: Um dos nós parece estar incomunicável. Qual é ele e por qual motivo o nó está incomunicável? Ele encontra-se associado ao AP1? Tente responder de forma técnica.
+
+R: O nó incomunicável é o sta3, pois está fora da área de cobertura do ap1. Como o alcance está limitado a 60 metros e o sta3 ultrapassou essa faixa não haverá comunicação entre ele e o ap1.
+
+Questão 3.2: O arquivo acima já vem pré-configurado com um modelo de propagação. Identifique um modelo de propagação diferente do configurado e que é suportado pelo Mininet-WiFi e então configure esse modelo no código acima. Identifique e descreva abaixo o nível de sinal percebido por sta1. Justifique o resultado obtido.
+
+R: Foi o utilizado o modelo de propagação International Telecommunication Union (ITU) Propagation Loss Model, c. A distância do ap1 até sta1 é de 5m. Com os parametros lF=0 , nFloors=0 , pL=0 obtivemos signal level de -41dBm. 
+lF = 1, nFloors = 1, pL = 1, obtivemos -23dBm.
+lF = 2, nFloors = 2, pL = 1, obtivemos -26dBm.
+lF = 2, nFloors = 2, pL = 2, obtivemos -27dBm.
+lF=5, nFloors=5, pL=5 o sinal ficou em  -50 dBm. 
+
+lF=5, nFloors=1, pL=5 o sinal ficou em  -30 dBm.
+lF=10, nFloors=1, pL=10 o sinal ficou em  -39 dBm. Apesar destes valores a qualidade do link alcançou o máximo(70/70).
+lF=10, nFloors=4, pL=10 o sinal ficou em  -69 dBm. Link Quality=41/70.
+
+Quanto mais pavimentos ou ambientes (tradução correta?) teremos queda no sinal, e caso o aumento do nFloors seja acompanhado pelos outros parâmetros a queda será mais acentuada, acompanhado de diminuição na qualidade do link. 
+
+Conclui-se que à medida que são aumentados, simultaneamente, os valores de IF, nFloors e pL, o nível de sinal diminui, exceto para todos os parâmetros valorados em zero. Caso nFloors seja menor do que os demais parametros a redução do sinal será mais lenta.
+
+
+Questão 3.3: Em qual(is) tipo(s) de ambiente(s) você utilizaria o modelo escolhido acima? Por quê?
+
+R: Utilizando os parâmetros adequados pode ser utilizado em qualquer ambiente: Casa, escritório, apartamentos.
+Por exemplo: Supondo que os parâmetros para o ambiente de uma casa sejam lF = 1, nFloors = 1, pL = 1 o nível de sinal de -23dBm é excelente.
+
+Questão 4.1: Utilizando o arquivo propagation_model.py e de forma similar ao exemplo acima, utilize o Iperf para mensurar a largura de banda entre dois nós que distam x metros.
+
+R: Quando o arquivo "propagation_model.py" foi carregado, não foi possível executar o comando "iperf sta1 sta2", retornando o seguinte erro: Exception: Could not connect to iperf on port 5001.
+
+
+Questão 4.2: O que seria o CCA Threshold?
+
+R: Avaliação de limite do canal disponível(tradução correta?)
+É utilizado pela camada MAC para determinar se o canal está disponível para transmissão de dados, e  quando há dados a serem recebidos.
+
+Questão 5.1: A comunicação entre sta1 e sta2 se manteve ininterrupta? Por quê? O que ocorreu com sta1 que o difere de sta2?
+
+R: Teoricamente deveriam manter a comunicação pois sta2 permaneceu na área de abrangência dos dois ap's e sta1 entrou na área do ap2. Consegui observar isso executando ping entre sta2 e ap1/ap2, e sta1 e ap2. Entre ap1 e sta1 não há comunicação. Todavia o comando sta1 ping sta2 retornou "Destination Host Unreachable" quando sta1 ultrapassa o limite de alcance de ap1. De acordo  com o manual do mininet wifi deveria haver comunicação durante todo o percurso de sta1, porém não foi o que houve. Segue o trecho do manual que apresenta esse modelo de mobilidade: "handover.py shows how to create a simple mobility scenario where a station moves past two access points, causing the station to hand off from one to the other. multipleWlan.py shows how to create a station with more than one wireless LAN interface. propagationModel.py shows how to use propagation models that impact how stations and access points can communicate with each other over distance. authentication.py shows how to set up WiFi encryption and passwords on access points and stations."
+Desse modo penso que deve ter havido algum erro no script ou na minha máquina.
+
+
+Questão 5.2: Qual o nome do processo ocorrido com sta1? Comente como ele funciona.
+
+R: Nada mais é do que o processo de mobilidade, que é uma situação em que uma estação passa por dois pontos de acesso, fazendo com que a estação seja distribuída de um acess point para outro.
+
+Questão 6.1: O que ocorre quando sta1 tenta se comunicar com sta3? E sta4 com sta6? Comente e justifique o comportamento.
+
+R: Utilizando o comando sta1 ping sta3 não houve comunicação entre os nós, o mesmo acontece quando foi digitado sta4 ping sta6. ??????
+????? (Algum erro de script??)
