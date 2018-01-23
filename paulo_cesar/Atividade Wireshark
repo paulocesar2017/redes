@@ -1,0 +1,121 @@
+
+
+Atividade 
+TURMA - 421 INFORMATICA SUBSEQUENTE
+ALUNO - PAULO CESAR DE JESUS LIMA
+
+                                                Wireshark
+
+
+
+
+ 01) Abra o arquivo exercicio-um.pcap. Você deverá ver 26 pacotes nesse arquivo. O conjunto de pacotes descreve uma “conversação” entre usuários clientes e um servidor central. Toda essa conversa acontece automaticamente depois que um usuário digita algo e tecla enter. Analise os pacotes para responder às seguintes questões em relação a essa conversação.
+
+a) Qual é o endereço IP do cliente que inicia a conversação?
+
+R = 131.247.95.216
+
+b) O que está ocorrendo nos frames 3, 4 e 5?
+
+R = Esta havendo uma breve conversa entre emissor e destinatario.
+No 03 - 1143 estas perguntando se pode falar com 1460
+   04 - o googlo responde ok
+   05 - o destinatario responde que sim que vai falar com ele.
+
+c) O que está ocorrendo nos frames 6 e 7?
+
+R = 06 - o destinatario pergunta se pode acessar a pagina http.
+    07 - a confirmacão de uqe recebeu a pagina.
+
+d) Ignore o frame 8. Contudo, para sua informação, o frame 8 é utilizado para gerenciar o controle de fluxos.
+
+R = atualização da pagina.
+
+
+e) O que está ocorrendo com os frames 9 e 10?
+
+R = 09 - ele faz a remontagem do segmento.
+    10 - responde ok txt em gtml.
+
+
+f) O que está ocorrendo no pacote 11?
+
+R = o destinatario confirma que recebeu.
+
+
+g) Após o recebimento do primeiro conjunto de pacotes, o cliente envia uma nova solicitação no pacote 12. Isso ocorre automaticamente sem qualquer ação realizada pelo usuário. Por que isso ocorre?
+O que está ocorrendo nos pacotes 13 a 22?
+
+R = O sistema operacional faz com que abra a pagina automaticamente.
+
+
+h) Explique o que está ocorrendo nos pacotes 23 a 26.
+Em poucas palavras descreva o que o usuário está fazendo (lendo email? Acessando uma página web? FTP? Outro?)
+
+R = 13 e 14 - O segmento foi dividido em dois.
+    15 - ok recebir.
+    19 e 17 - O seguimento foi enviado em três partes.
+    20 - o segmento foi remontado.
+    21 - confima ok. 
+    22 - confirma que foram recebidos todos.
+
+i)  Explique o que está ocorrendo nos pacotes 23 a 26.
+
+
+R = 23 - Esta solicitando um icone.
+    24 - segmento enviado.
+    25 - confirmaçao que foi recebido.
+    26 - confirmaçao que recebeu.
+
+j)  Em poucas palavras descreva o que o usuário está fazendo (lendo email? Acessando uma página web? FTP? Outro?)
+
+R = o emissor começar a acessar a pagina web.
+
+
+02) Abra o arquivo exercicio-dois.pcap. Você deverá ver 176 pacotes listados.
+
+a) Nos primeiros pacotes, a máquina cliente está procurando o common name (cname) de uma página web para encontrar o seu endereço IP. Qual o cname desta página web? Cite dois endereços IP desta página web.
+
+R = 216.109.106
+    216.109.117.09
+
+b) Quantos pacotes/quadros são necessários para receber a página web (referente apenas ao primeiro http request)?
+
+R = 16 
+
+
+c) O que está ocorrendo nos pacotes 26 e 27? Todos os componentes de uma página web tem de vir de um mesmo servidor? Dica: Seu computador usa um pedido de DNS para pesquisar um CNAME e ele retorna um conjunto de endereços IP (um endereço primário e um ou mais endereços de backup) que podem ser usados para entrar em contato com o servidor.
+
+
+R = o emissor consulta a pagina DNS , e mediatamente chega a mensagem que ele pode usar mais de uma pagina.
+
+
+d) No pacote 37 vemos outra consulta DNS, desta vez para us.i1.yimg.com. Por que o cliente precisa pesquisar sobre esse endereço IP? Não obtivemos este endereço no pacote 26? (Compare cuidadosamente os dois nomes comuns nos pacotes 26 e 37.)
+
+
+R = para saber com quem ele está falando.
+
+
+e) No pacote 42 vemos uma declaração HTTP "Get" e, no pacote 48, uma nova declaração HTTP "Get". Por que o sistema não precisa de outro pedido de DNS antes da segunda declaração de obtenção? Clique no pacote 42 e olhe na janela do meio. Expanda a linha intitulada "Hypertext Transfer Protocol" e leia a linha "Host:". Compare essa linha com a linha "Host:" para o pacote 48.
+
+
+R = porque são os mesmo endereços.
+
+
+f)  Examine o pacote 139. Este é um segmento de uma PDU que é remontado com vários outros segmentos no pacote 160. Olhe para os pacotes 141, 142 e 143. Esses três pacotes também fazem parte do pacote 160? O que acontece se um conjunto de pacotes que deveriam ser remontados não chegam em um fluxo contínuo ou não chegam na ordem correta?
+
+
+R =O emeissor percebe que o arquivo enviado não faz parte do mesmo pacote,teram que ser reenviados.
+
+
+03)  Abra o arquivo exercicio-tres.pcap. Você deverá ver 22 pacotes listados. Esses pacotes representam duas diferente solicitações de acesso a páginas web. Pacotes 1-7 dizem respeito a solicitações da página yahoo.com, enquanto que os pacotes 8-22 dizem respeito a página my.usf.edu.
+
+
+a)  Compare a porta de destino no pacote TCP no quadro 3 com a porta de destino no pacote TCP do frame 12. Qual diferença você pode notar? O que isso diz sobre a diferença entre as duas solicitações?
+
+R = No 03 - ele verifica as informaçoes já no 12 ele confirma que usam mais de um .
+
+b)  Explique o que está acontecendo na linha iii. Por que não existem quadros listados para yahoo na linha iii?
+
+R =  " linha iii " A sua mensagem e criptografada.
+     "  yahoo na linha iii " Não há comunicação criptografada.
