@@ -1,0 +1,106 @@
+
+
+
+ALUNO - Paulo cesar de jesus lima
+TURMA - 421 informatica subsequente
+
+
+Atividade:
+                                                  
+
+                                                Mininet-WiFi
+
+
+
+
+
+1) Em sua opinião, qual a principal publicação científica relacionada ao Mininet-WiFi? Por
+quê? Você pode utilizar o google scholar para identificar os artigos que citam o Mininet-WiFi.
+
+R = obseva-se que o sait  Mininet-Wife e um dois mais solicitado ,mostrando a sua real importancia dentre os outros.
+
+2) Qual é o atraso observado entre sta1 e sta2? Houve perda de pacotes no canal?
+Justifique suas respostas de forma objetiva.
+
+
+R = Não ha perda de pacotes porem depois de ter de ter sido gigitado um comando o sta1 fica desconectado e ficou em 0.222ms
+
+ 2.2: Use a ferramenta iperf para avaliar a banda disponível (Mbps) entre os nós sta1 e sta2.
+
+
+R = O comando fez com que a taxa de transferencia de 10.5 e 10.6Mbps entre os nós e o ap.
+
+
+2.3: Faça um simples comentário para cada uma das informações especificadas na lista de
+parâmetros de sta1.
+
+
+R = a potencia  foi de 14 dbm,sta1 conectada a conexão sem fio Wlan0, ip de10.0.0.1,o alcance da rede 62 metros,frequencia de 2,4Ghz,modo sem fio 54Mbs, posiçao 1.0.0,canal de operaçao 1,a potencia e de -30 
+
+
+3.1: Um dos nós parece estar incomunicável. Qual é ele e por qual motivo o nó está
+incomunicável? Ele encontra-se associado ao AP1? Tente responder de forma técnica.
+
+
+R = O sta3 está fora de area, com o alcance limitado a 60m o sta3 ultrapasa essa faixa 
+
+
+3.2: O arquivo acima já vem pré-configurado com um modelo de propagação. Identifique
+um modelo de propagação diferente do configurado e que é suportado pelo Mininet-WiFi
+e então configure esse modelo no código acima. Identifique e descreva abaixo o nível de sinal
+percebido por sta1. Justifique o resultado obtido.
+
+
+
+R =1F= 5,nFloors=1,pl=5 obtivemos  -23 dbm
+   1F= 5,nFloors=2,pl=1 obtivemos  -26dbm
+   1F= 5,nFloors=2,pl=2 obtivemos  -27 dbm
+   1F= 5,nFloors=5,pl=5 o sinal ficou em -50 dbm 
+
+   1F= 5,nFloors=1,pl=1 obtivemos  -30 dbm
+   1F= 10,nFloors=1,pl=10 obtivemos -39 dbm
+   1F= 5,nFloors=4,pl=10 obtivemos  -69 dbm
+
+Quanto maior for subindo os pavimentos mais, teremos a queda do sinal
+
+
+3.3: Em qual(is) tipo(s) de ambiente(s) você utilizaria o modelo escolhido acima? Por
+quê?
+
+
+R = Com os parametros adequados pode ser usado em qualque lugar.
+
+4.1: Utilizando o arquivo propagation_model.py e de forma similar ao exemplo acima,
+utilize o Iperf para mensurar a largura de banda entre dois nós que distam x metros.
+
+
+
+R = O arquivo quando foi carregado ,nao teve como executar o comando iperf sta1 sta2 pessistindo no erro
+
+
+4.2: O que seria o CCA Threshold?
+
+
+R = Avaliaçao do limite do canal do disponivel "traduçao correta.", e utilizada pela camada MAC para determinar se o canal está disponivel.
+
+
+5.1: A comunicação entre sta1 e sta2 se manteve ininterrupta? Por quê? O que ocorreu
+com sta1 que o difere de sta2?
+
+R = A sua comunicaçao deferia ter pois sta2 está na area de cobertura dos dois ap e sta1 entrou na area de ap2,foi observado que ao executar  o codigo ping entre sta2 e ap1/ap2, e sta1 e ap2 entre ap1 e sta1 nao esta tendo comunicaçao ,retornando se o sta1 ping sta2 para seu destinatario.  
+
+
+5.2: Qual o nome do processo ocorrido com sta1? Comente como ele funciona
+
+
+R= E um processo de modalidade ,situaçao em que uma estaçao passa por dois pontos de acesso tornado a estaçao um ponto de distribuiçao. 
+
+
+6.1: O que ocorre quando sta1 tenta se comunicar com sta3? E sta4 com sta6? Comente
+e justifique o comportamento.
+
+
+R = quando se utiliza o comando sta1 ping sta3 tenta se comunicar com sta3 e nao ha comunicação entre nos o mesmo acontece quando foi o sta4 ping sta6 ocorre um erro no script.
+
+
+
