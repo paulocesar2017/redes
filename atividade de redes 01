@@ -1,0 +1,122 @@
+Aluno - Paulo Cesar de Jesus Lima
+turma - subsequente
+curso - intormática
+
+1º)Verifique em qual diretório você se encontra e coloque o nome dele abaixo.
+
+R = PWD
+
+/home/pclima2010
+
+2º)Crie a seguinte estrutura de diretórios dentro do diretório identificado acima.
+
+./my_test/my_work/
+
+./my_test/job1/
+
+./my_test/job1/task1/
+
+a) R = mkdir my teste
+
+   cd may teste
+
+   mkdir my work
+
+b) R = cd may teste
+
+   mkdir job1
+
+   cd job1
+
+   mkdir task1
+
+3º)Entre na pasta my_work
+
+R = cd ../
+
+cd ../
+
+cd may teste/ may work
+
+4º)Crie um arquivo chamado “numbers.txt” contendo o seguinte conteúdo:
+
+10
+
+100
+
+50
+
+25
+
+1
+
+2
+
+R = touch numbers.txt
+
+nano number.txt
+
+100
+
+50
+
+25
+
+1
+
+2
+
+5º)cp numbers.txt numbers1.txt
+
+cp numbers.txt numbers2.txt
+
+6º) Copiar todos os arquivos com extensão .txt para a pasta task1. Para tanto, utilize apenas um comando.
+
+R = cp numbers.txt ../job1/task1
+
+cp numbers1.txt ../job1/task1
+
+cp numbers2.txt ../job/task1           
+
+7º)Acesse task1 e exibir todos os arquivos com seus detalhes (permissões de acesso, data, hora de criação, tamanho)
+
+R = cd my teste
+cd job1
+cd task1
+ls -la
+
+8º) Em task1, altere a permissão de acesso do arquivo numbers.txt para –rwxr-xr-x
+
+R = chmod 755 numbers1.txt
+
+9º)Altere a permissão de acesso do arquivo numbers1.txt para -rw-r—r--
+
+R = chmod 644 numbers1.txt
+
+10º) Copie a pasta task1 e seu conteúdo, para dentro do /home/seu_usuario
+
+R = cp: -r
+
+omitindo o direitorio tasl1
+
+11º)Renomeie o diretório my_work para my_work1
+
+R = mv my work my worl1
+
+12º) Apague a pasta task1
+
+R = rm -r task1
+
+13º)Liste todos os arquivos da pasta /bin e guarde essa lista em um arquivo chamado “listabin.txt”
+
+R = ls -la /bin > listabin.txt
+
+14º)Limpe o terminal
+
+R = clear
+
+15º)Qual o comando lista todos os processos em execução no sistema operacional Ubuntu?
+
+R = top
+
+16º) Faça um formulário em script bash ou python, onde seja possível capturar entradas no sistema e imprimir um resumo ao final do preenchimento. Esse arquivo deve possuir, obrigatoriamente, as seguintes informações: nome, sobrenome, sexo, idade e grau de instrução.
