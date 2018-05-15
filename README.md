@@ -6,6 +6,9 @@
 * Atividade 02 (SDN - comandos básicos) - [entrega 15/04](https://docs.google.com/document/d/1bxtaE5U0vx8Ba-P8LJwFnhDtXiu37z0v_8IEpGOrAuI/edit?usp=sharing)   
 * Atividade 03 (Mininet-WiFi: codificando) - [entrega 22/04](https://docs.google.com/document/d/1MUboLU9_scZ7w0Fprj_6b-7WK-kc9guFhAQ0dPN-8o4/edit?usp=sharing)    
 
+**II Unidade**
+* Atividade 04 (Lab: DHCP Server)    
+
 ### Material de Apoio  
 * [Introdução ao Mininet e Mininet-WiFi](https://docs.google.com/presentation/d/13I5Zw4ki7udE2pTWf13obRayVGxqObCKE6Rg7eLFPAk/edit?usp=sharing)   
 * [On the role of Open Source in the Network Softwarization trend](https://docs.google.com/presentation/d/1NZs8ryftkONwLMmnSJnJeW3kOZkXDFzaJwDZT1e6vZU/edit?usp=sharing)       
