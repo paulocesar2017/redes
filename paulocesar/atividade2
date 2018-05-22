@@ -1,0 +1,81 @@
+1. No LINUX foi implementado um grande número e variedade de comandos, opções e  parâmetros. Que comando você utilizaria para visualizar as informações de um determinado comando?
+
+R = man <comando>
+
+2. Que comando do LINUX é utilizado para ver o caminho completo do diretório corrente?
+
+
+R = pwd
+
+
+3. Quais são os comandos de manipulação de diretório no LINUX? (criação, remoção e navegação de diretórios)
+
+
+R = mkdir ; rmdir e cd
+
+
+4. Que comando do LINUX você utilizaria para produzir uma listagem de arquivos de um diretório?
+
+R = ls
+
+5. Que comando do LINUX você utilizaria para copiar arquivos de um diretório para outro?
+
+R = cp /diretorio_origem/arquivo /diretorio_destino/arquivo
+
+6. Que comando do LINUX você utilizaria para mover definitivamente um arquivo de um diretório para outro diretório?
+
+R =  mv /diretorio_origem/arquivo /diretorio_destino/arquivo
+
+
+7. Que comando do LINUX você utilizaria para excluir um arquivo de um diretório?
+
+
+R = rm /diretorio_origem/arquivo
+
+8. Que comando do LINUX você utilizaria para visualizar o conteúdo de arquivos?
+
+R = cat /<diretório>/arquivo
+
+9. Faça o que se pede. Para cada questão, diga qual comando utilizou para realizar a operação.
+
+i) Crie um arquivo chamado aula1.txt com o seguinte conteúdo:
+touch aula, papel, bola
+
+R = Touch aula1.txt
+nano aula1.txt
+aula
+papel
+bola
+
+ii) Crie um arquivo chamado aula2.txt com o seguinte conteúdo:
+
+R = touch aula2.txt
+nano aula2.txt
+anel
+quadrado
+som
+
+iii) Copie todo o conteúdo de aula1.txt para dentro de aula2.txt.
+
+R = cp aula1.txt/ aula2.txt
+
+iv) Apague a 3 linha de aula1.txt
+
+R = rm aula1.txt
+
+v) Substitua a palavra "aula" por "ead".
+
+R = nano aula1.txt
+rm aula
+ead
+
+vi) Copia todo o conteúdo de aula2.txt para aula1.txt
+
+R = cp aula2.txt/aula1.txt
+
+10. Execute o script abaixo e explique o que ele faz. Diga também como e o que teve de ser feito para que o arquivo fosse executado.
+
+#!/bin/bash
+echo "Data e Horário:" Executa data e hora
+date
+echo
