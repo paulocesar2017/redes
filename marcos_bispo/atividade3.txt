@@ -1,0 +1,69 @@
+NOME: MARCOS BISPO
+
+                     ATIVIDADE 3 CONEXÃO
+                     
+                     QUESTÃO 1-
+
+#!/usr/bin/python
+
+'Setting the position of nodes'
+
+from mininet.net import Mininet
+from mininet.node import Controller, OVSKernelAP
+from mininet.cli import CLI
+from mininet.log import setLogLevel
+
+
+def topology():
+
+    "Create a network."
+    net = Mininet(controller=Controller, accessPoint=OVSKernelAP)
+
+    print "*** Creating nodes"
+    net.addStation('sta1', mac='00:00:00:00:00:02', ip='10.0.0.1/8',
+                   position='30,60,0')
+    net.addStation('sta3', mac='00:00:00:00:00:04', ip='10.0.0.4/8',
+          position='60,70,0')
+    ap1 = net.addAccessPoint('ap1', ssid='new-ssid', mode='g', channel='1',
+                             position='60,50,0')
+    ap2 = net.addAccessPoint('ap2', ssid='new2-ssid', mode='g', channel='1',
+                             position='135,50,0')
+    net.addStation('sta2', mac='00:00:00:00:00:03', ip='10.0.0.2/8',
+                   position='120,30,0')
+    net.addStation('sta4', mac='00:00:00:00:00:05', ip='10.0.0.5/8',
+                   position='123,50,0')
+    c1 = net.addController('c1', controller=Controller)
+    h1 = net.addHost ('h1', ip='10.0.0.3/8')
+
+    net.propagationModel(model="logDistance", exp=4.5)
+    print "*** Configuring wifi nodes"
+    net.configureWifiNodes()
+
+    print "*** Creating links"
+    net.addLink(ap1, h1)
+    net.plotGraph(max_x=200, max_y=200)
+
+
+    print "*** Starting network"
+    net.build()
+    c1.start()
+    ap1.start([c1])
+
+    print "*** Running CLI"
+    CLI(net)
+
+    print "*** Stopping network"
+    net.stop()
+
+
+if __name__ == '__main__':
+    setLogLevel('info')
+    topology()
+
+file:///home/marcos/figure_1.png
+
+
+
+QUESTÃO 2. Estações e hosts conectados ao AP1 conseguem se comunicar com estações e hosts conectados ao AP2? Por quê?
+RESPOSTA:PORQUE ESTÃO CONECTADOS NO MESMO NET.ADDCONTROLLER.
+ 

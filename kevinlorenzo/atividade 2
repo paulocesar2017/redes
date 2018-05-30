@@ -1,0 +1,2 @@
+ sh ovs-ofctl add-flow s1 in_port=1,actions=drop
+ ao mudar o endereço da saída do fluxo, o fluxo do ping entre h1 e h2 foi interrompido
